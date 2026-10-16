@@ -1,0 +1,13 @@
+[project]
+name = "marketing_data_platform"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-databricks>=1.12,<1.13",
+    "elementary-data[databricks]~=0.22.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "marketing_platform",
+]
