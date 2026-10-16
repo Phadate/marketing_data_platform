@@ -1,0 +1,16 @@
+[sqlfluff]
+dialect = databricks
+templater = jinja
+max_line_length = 120
+exclude_rules = AM04, RF02, RF03, ST06
+# dbt-only objects (ref, source, flags, config) don't exist when sqlfluff renders SQL
+ignore = templating
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower
