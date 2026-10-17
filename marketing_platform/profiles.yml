@@ -17,7 +17,7 @@ marketing_platform:
   outputs:
     dev: &dev_service_account
       <<: *base
-      host: 
+      host:
       token: "{{ env_var('DATABRICKS_PAT_TOKEN') }}"
       catalog: "{{ env_var('DEV_CATALOG') }}"
       schema: "{{ env_var('DEV_SCHEMA') }}"
@@ -27,7 +27,7 @@ marketing_platform:
       <<: *base_auth
       catalog:
       schema: "{{ env_var('DEV_SCHEMA') }}"
-      host: 
+      host:
       http_path:
 
     staging: &staging_service_account
@@ -40,7 +40,7 @@ marketing_platform:
       <<: *base_auth
       catalog:
       schema:
-      host: 
+      host:
       http_path:
 
 
