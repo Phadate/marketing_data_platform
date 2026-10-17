@@ -17,3 +17,4 @@ repos:
         entry: uv run --project marketing_platform sqlfluff lint
         language: system
         types: [sql]
+        files: ^marketing_platform/models/.*\.sql$
