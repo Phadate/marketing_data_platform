@@ -33,7 +33,18 @@ models:
   marketing_platform:
     staging:
       +materialized: view
+      +database: silver
+      +schema: staging
     intermediate:
       +materialized: table
+      +database: silver
+      +schema: preparation
     marts:
       +materialized: table
+      +database: gold
+      +schema: marketing_spend
+
+seeds:
+  marketing_platform:
+    +database: silver
+    +schema: reference
